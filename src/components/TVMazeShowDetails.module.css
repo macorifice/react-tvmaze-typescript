@@ -1,0 +1,62 @@
+.button:hover {
+    color: darkcyan;
+    border-color: darkcyan;
+}
+
+.image {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.closeButton {
+    color: darkred;
+    font-size: 30px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.summary {
+    padding-bottom: 20px;
+}
+
+.wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 960px; /* 2 */
+  
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+  }
+
+  .card {
+    display: auto;
+    height: 280px;
+    width: 200px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }

@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { TVMazeResults } from './components/TVMazeResults';
+import { TVMazeSearch } from './components/TVMazeSearch';
+import { useTVMaze } from './hooks/useTVMaze';
+import { TVMazeShowDetails } from './components/TVMazeShowDetails';
 
-function App() {
+export const App = () => {
+  const {series, details, search, itemClick, closeModal} = useTVMaze();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TVMazeSearch search={search} />
+      <TVMazeResults result={series} itemClick={itemClick}/>
+      <TVMazeShowDetails show={details} onClose={closeModal}/>
+      
     </div>
   );
 }
 
-export default App;
+export default App
