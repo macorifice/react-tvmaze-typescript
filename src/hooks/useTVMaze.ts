@@ -7,7 +7,7 @@ export const useTVMaze = () => {
     const [result, setResult] = useState<Series[]>([])
 
     const searchHandler = (text: string) => {
-        Axios.get<Series[]>(`http://api.tvmaze.com/search/shows?q=${text}`)
+        Axios.get<Series[]>(`https://api.tvmaze.com/search/shows?q=${text}`)
             .then(res => setResult(res.data))
     }
 
