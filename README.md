@@ -26,6 +26,8 @@ yarn start or npm run start
 Report [here](https://github.com/macorifice/react-tvmaze-typescript/issues). 
 Guaranteed reply within a day.
 
+#### [Contribution guidelines for this project](@github/fabiobiondi 🙏)
+
 #### Contact
 Stefano Di Cecco (diceccostefano87@gmail.com)
 
